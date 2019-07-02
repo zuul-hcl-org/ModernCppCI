@@ -34,5 +34,5 @@
             host-vars: 
               node1:
                 jfrog: "http://172.31.27.120:9083"
-                jfrog_api_token: "AKCp5dKENgN8KDBktFnzReTWGs3w7T7LL3WTzCTHGo8HkAewVgszFFVejsBEsbmHq9qemJyYx"
+                jfrog_api_token: "AKCp5dKPSCchSnYWq9RDxLwpTrEcMJpJR2ikAXMAr8CnHdaHMC9Jdykio1xWqRe68pga4NEpJ"
             nodeset: emea-node
