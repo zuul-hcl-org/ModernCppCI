@@ -26,12 +26,16 @@
              
     - name: Build sample project
       shell: |
-            /home/ec2-user/cbuild.sh
+            cd ~/work/ModernCppCI
+            rm -rf Build
+            cmake -H. -BBuild
+            cd Build
+            cmake --build .
       register: build_status
       
     - name: Test sample project
       shell: |
-            cd ~/work/ModernCppCI
+            cd ~/work/ModernCppCI/Build
             ctest -V 
       register: test_status
       
