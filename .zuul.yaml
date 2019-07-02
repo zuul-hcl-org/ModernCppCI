@@ -1,8 +1,8 @@
 - nodeset:
     name: emea-node
     nodes:
-      - name: centos1
-        label: centos1
+      - name: node1
+        label: ubuntu-bionic
          
 - nodeset:
     name: nafta-node
@@ -35,4 +35,4 @@
           #    node2:
         #        jfrog: "http://172.31.20.175:9082"
          #       jfrog_api_token: "AKCp5dK4wtavETSJAiGFMbVRpe7YeGa8WdPzNmzqtvukpUnPdpschfY1RtrZXadQCpSHpAm4d"
-            nodeset: nafta-node
+            nodeset: emea-node
