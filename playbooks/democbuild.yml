@@ -26,11 +26,7 @@
              
     - name: Build sample project
       shell: |
-            cd ~/work/ModernCppCI
-            rm -rf Build
-            cmake -H. -BBuild
-            cd Build
-            cmake --build .
+            /home/ec2-user/cbuild.sh
       register: build_status
       
     - name: Test sample project
