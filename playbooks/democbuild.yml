@@ -12,13 +12,16 @@
             rm -rf ~/work
       register: clean_output
       
-    - name: Clone git repo
-      git:
-        repo: https://github.com/zuul-hcl-org/ModernCppCI.git
-        dest: ~/work/ModernCppCI
-      shell: |
-            cd ~/work/ModernCppCI
-            git submodule init && git submodule update   
+    - name: Clone git repo and initialize submodules
+      block:
+        - name: Clone the repo
+          git:
+            repo: https://github.com/zuul-hcl-org/ModernCppCI.git
+            dest: ~/work/ModernCppCI
+        - name: Initialize submodules    
+          shell: |
+                cd ~/work/ModernCppCI
+                git submodule init && git submodule update   
       when: clean_output is succeeded
              
     - name: Build sample project
