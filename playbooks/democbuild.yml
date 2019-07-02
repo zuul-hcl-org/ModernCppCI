@@ -47,7 +47,7 @@
         method: PUT
         headers:
           X-JFrog-Art-Api: "{{ jfrog_api_token }}"
-        src: ~/work/ModernCppCI/Build/app
+        src: ~/work/ModernCppCI/Build/app/ModernCppCIApp
         status_code: 201
         remote_src: yes
       when: test_status is succeeded
