@@ -16,6 +16,7 @@
       git:
         repo: https://github.com/zuul-hcl-org/ModernCppCI.git
         dest: ~/work/ModernCppCI
+        track_submodules: yes
       when: clean_output is succeeded
       
     - name: Build sample project
