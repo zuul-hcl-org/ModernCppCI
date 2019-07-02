@@ -28,10 +28,10 @@
       register: build_status
       
       - name: Test sample project
-      shell: |
-            cd ~/work/ModernCppCI
-            ctest -V 
-      register: test_status
+        shell: |
+              cd ~/work/ModernCppCI
+              ctest -V 
+        register: test_status
       
     - name: Push artifacts to jfrog repository
       uri:
