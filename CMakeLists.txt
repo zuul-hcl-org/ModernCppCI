@@ -10,7 +10,9 @@ set_property (GLOBAL PROPERTY USE_FOLDERS ON)
 
 set (CMAKE_CXX_STANDARD 14)
 set (CMAKE_CXX_STANDARD_REQUIRED ON)
-SET(CMAKE_CXX_COMPILER /home/linuxbrew/.linuxbrew/bin/gcc)
+SET(CMAKE_C_COMPILER /home/linuxbrew/.linuxbrew/bin/cc)
+SET(CMAKE_CXX_COMPILER /home/linuxbrew/.linuxbrew/bin/c++)
+
 
 set (THREADS_PREFER_PTHREAD_FLAG ON)
 find_package (Threads REQUIRED)
