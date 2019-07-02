@@ -36,13 +36,13 @@
       
     - name: Push artifacts to jfrog repository
       uri:
-        url: "{{ jfrog }}/artifactory/generic-local/binary_{{ zuul.build }}"
+        url: "{{ jfrog }}/artifactory/generic-local/ModernCppCIApp_{{ zuul.build }}"
         #when: zuul_location in emea
         validate_certs: no
         method: PUT
         headers:
           X-JFrog-Art-Api: "{{ jfrog_api_token }}"
-        src: ~/work/ModernCppCI.git/build/binary
+        src: ~/work/ModernCppCI/Build/app
         status_code: 201
         remote_src: yes
       when: test_status is succeeded
