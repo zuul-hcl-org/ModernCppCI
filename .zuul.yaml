@@ -21,16 +21,33 @@
     name: democbuildjob
     run: playbooks/democbuild.yml
     parent: base
+    
+- job:
+    name: checklabel_emea
+    run: playbooks/checklabel_emea.yaml
+    parent: base
+    
+    
+- job:
+    name: checklabel_nafta
+    run: playbooks/checklabel_nafta.yaml
+    parent: base
+    
 
 - project:
 #    vars:
 #      myname: "juhi"
+    checklabel_emea:
+      jobs:
+       - checklabel_emea:
+           nodeset: emea-node
+    checklabel_nafta:
+      jobs:
+       - checklabel_nafta:
+           nodeset: nafta-node   
     check_nafta_cpjt:
       jobs:
         - democbuildjob:
-            irrelevant-files:
-              - .zuul.yaml
-              - playbooks
             host-vars: 
               node1:
                 jfrog: "http://172.31.27.120:9083"
