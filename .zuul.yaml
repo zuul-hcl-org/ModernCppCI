@@ -59,5 +59,5 @@
             host-vars: 
               node2:
                 jfrog: "http://172.31.20.175:9083"
-                jfrog_api_token: "AKCp5dKPSCchSnYWq9RDxLwpTrEcMJpJR2ikAXMAr8CnHdaHMC9Jdykio1xWqRe68pga4NEpJ"
+                jfrog_api_token: "AKCp5dKPSD6DjaJRUb6xeXtxLhWUdgnQ5gUDCp9XgFU3ag6wDutAmgD4cMNts9bjmbdWwejoC"
             nodeset: nafta-node
