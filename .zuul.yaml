@@ -45,7 +45,7 @@
       jobs:
        - checklabel_nafta:
            nodeset: nafta-node   
-    check_nafta_cpjt:
+    check_emea:
       jobs:
         - democbuildjob:
             host-vars: 
